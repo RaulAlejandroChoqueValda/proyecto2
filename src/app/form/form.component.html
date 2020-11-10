@@ -1,0 +1,150 @@
+
+<div class="col-md-12 order-md-1">
+    <form class="needs-validation" [formGroup]="formulario">
+        <h2>Informacion Basica</h2>
+        <hr>
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <label for="nombre">Nombre</label>
+            <input class= "form-control" type="text" placeholder="Nombre"  formControlName="nombre">
+            <div class="invalid-feedback">
+              Ingrese un Nombre.
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="ci">CI</label>
+            <input class= "form-control" type="number" placeholder="CI"  formControlName="ci">
+            <div class="invalid-feedback">
+              Ingrese un Carnet de Identidad.
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="nempleado">Numero de empleado</label>
+            <input class= "form-control" type="number" placeholder="Numero de Empleado"  formControlName="nempleado">
+            <div class="invalid-feedback">
+              Ingrese un Numero de Empleado.
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="area">Area de Trabajo</label>
+            <input class= "form-control" type="text" placeholder="Area de Trabajo"  formControlName="area">
+            <div class="invalid-feedback">
+              Ingrese un Area de Trabajo.
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="profesion">Profesion</label>
+            <input class= "form-control" type="text" placeholder="Profesion"  formControlName="profesion">
+            <div class="invalid-feedback">
+              Ingrese una Profesion.
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="salhora">Salario por Hora</label>
+                <input class= "form-control" type="number" placeholder="Salario por Hora"  formControlName="salhora">
+                <div class="invalid-feedback">
+                  Ingrese el salario por Hora.
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="salmes">Salario por Mes</label>
+                <input class= "form-control" type="number" placeholder="Salario por Mes"  formControlName="salmes">
+                <div class="invalid-feedback">
+                  Ingrese el salario por año.
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="anios">Años de Trabajo</label>
+                <input class= "form-control" type="number" placeholder="Años de Trabajo"  formControlName="anios">
+                <div class="invalid-feedback">
+                  Ingrese un numero de Años .
+                </div>
+              </div>
+        </div>
+
+        <h2>Seguro Medico</h2>
+        <hr>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="nseguro">Numero de Seguro Medico</label>
+                <input class= "form-control needs-validation" type="number" placeholder="Numero de Seguro Medico"  formControlName="nseguro">
+                <div class="invalid-feedback">
+                  Ingrese el numero de seguro medico.
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="tiposangre">Tipo de Sangre</label>
+                <select formControlName="tipodesangre" class="form-control">
+                    <option disabled>Selecciona Tipo de Sangre</option>
+                    <option *ngFor="let tipo of tiposs">{{tipo}}</option>
+                   </select>
+                <div class="invalid-feedback">
+                    Seleccione un tipo de sangre.
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="peso">Peso</label>
+                <input class= "form-control" type="number" placeholder="Peso"  formControlName="peso">
+                <div class="invalid-feedback">
+                  Ingrese un Peso.
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="estatura">Estatura</label>
+                <input class= "form-control" type="number" placeholder="Estatura"  formControlName="estatura">
+                <div class="invalid-feedback">
+                  Ingrese una Estatura.
+                </div>
+            </div>
+        </div>
+        <div class="row">
+             <div class="col-md-12">
+                <label for="enfbase">Enfermedad Base</label>
+                <textarea class= "form-control"  placeholder="Ingrese si tiene su enfermedad base"  formControlName="enfbase"></textarea>
+            </div>
+        </div>
+
+        <h2>Contactos</h2>
+        <hr>
+        <div class="row">
+            <div class="col-md-12 mb-3">
+                <label for="direccion">Direccion</label>
+                <input class= "form-control" type="text" placeholder="Direccion"  formControlName="direccion">
+                <div class="invalid-feedback">
+                  Ingrese una Direccion.
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="telefono">Telefono</label>
+                <input class= "form-control" type="number" placeholder="Telefono"  formControlName="telefono">
+                <div class="invalid-feedback">
+                  Ingrese un numero telefonico.
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="correo">Correo</label>
+                <input class= "form-control" type="text" placeholder="Correo"  formControlName="correo">
+                <div class="invalid-feedback">
+                  Ingrese una Fecha.
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Registrar Empleado</button>
+        {{formulario.value | json }}
+   
+    </form>
+    <br>
+    </div>
